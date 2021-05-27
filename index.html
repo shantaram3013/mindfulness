@@ -13,7 +13,7 @@
 <body class='v-flex-centered'>
     <form id='form' class='v-flex-centered'>
         <p class='text v-flex-centered'>
-            Having trouble keeping your code full of best practices? Keep resorting to writing your code with a hammer, trying to beat it into submission? This site is for you! Pick an interval, and a suitably snarky message, and hit "Remind me!" to be pinged with annoying reminders to write better code! Who wouldn't want this?
+            Having trouble keeping your code full of best practices? Keep resorting to writing your code with a hammer, trying to beat it into submission? This site is for you! Pick an interval, and a suitably snarky message, and hit "Remind me!" to be pinged with annoying reminders to write better code! Who wouldn't want this? And I guess you could also use it as a reminder to commit...
         </p>
         <div id='form-heading'>Are you being mindful?</div>
         <div class='input-wrapper'>
@@ -35,7 +35,13 @@
             <input type='text' id='message' value='Hey! Put down that hammer!'>
         </div>
 
+
         <div class='input-wrapper'>
+            <label for="repeat">Repeat?</label>
+            <input id='repeat' type="checkbox" checked>
+        </div>
+
+        <div id='repeat-wrapper' class='input-wrapper'>
             <button id='remind-me' type="button">Remind me!</button>
         </div>
     </form>
