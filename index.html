@@ -20,7 +20,6 @@
             <label for='interval'>How often do you want to be reminded?</label>
             <div class='select-wrapper'>
                 <select id='interval'>
-                    <option value='-1'>---</option>
                     <option value='15'>Every 15 minutes</option>
                     <option value='30'>Every 30 minutes</option>
                     <option value='60'>Every hour</option>
@@ -35,14 +34,15 @@
             <input type='text' id='message' value='Hey! Put down that hammer!'>
         </div>
 
+        <div id='button-wrapper'>
+            <div id='repeat-wrapper' class='input-wrapper'>
+                <label for="repeat">Repeat?</label>
+                <input id='repeat' type="checkbox" checked>
+            </div>
 
-        <div class='input-wrapper'>
-            <label for="repeat">Repeat?</label>
-            <input id='repeat' type="checkbox" checked>
-        </div>
-
-        <div id='repeat-wrapper' class='input-wrapper'>
-            <button id='remind-me' type="button">Remind me!</button>
+            <div class='input-wrapper'>
+                <button id='remind-me' type="button">Remind me!</button>
+            </div>
         </div>
     </form>
 
@@ -50,6 +50,26 @@
         Based on a concept by <a href='https://notlaura.com'>Lara Schenck</a>. Site design by <a href='https://shantaram.xyz'>shantaram</a>
     </div>
 
+    <div id='mask' class='v-flex-centered'>
+        <div id='alert' class='v-flex-centered'>
+            <div id='alert-header'>
+                test
+            </div>
+            <div id='alert-body'>
+
+
+                Ab a velit fugit sapiente quis. Odio soluta voluptatem recusandae amet. Ratione et facilis et earum.
+
+                Omnis quia dolorum aut quos quam repellendus aliquid. Rerum inventore nesciunt et ut fuga distinctio. Excepturi sit totam ullam a id.…
+            </div>
+            <div id='alert-footer'>
+                <button id='alert-close'>Close</button>
+                <button id='alert-action'>Action</button>
+            </div>
+        </div>
+    </div>
+
+    <audio src='alarm.mp3' id='audio'></audio>
     <script src='main.js'></script>
 </body>
 
