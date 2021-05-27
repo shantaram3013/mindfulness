@@ -17,7 +17,6 @@ onmessage = function(e) {
                 postMessage({
                     done: true
                 });
-
                 clearInterval(this.interval);
             }
             if (this.heartbeat) {

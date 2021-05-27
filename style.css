@@ -129,24 +129,21 @@ button:focus {
 
 #alert {
     width: 35%;
-    height: 40%;
+    min-height: 40%;
     background: white;
     border-radius: 1em;
     flex-direction: column;
     padding-bottom: 1em;
     font-size: 1.2em;
-    display: inherit;
 }
 
 #alert-header,
 #alert-footer {
-    height: 10%;
     width: 90%;
-    display: inherit;
+    height: 10%;
 }
 
 #alert-header {
-    height: 10%;
     padding: 1.4em;
     padding-left: 2em;
     text-align: left;
@@ -155,23 +152,20 @@ button:focus {
 }
 
 #alert-body {
+    width: 90%;
     height: 80%;
     text-align: left;
     padding-left: 2em;
     padding-right: 1.3em;
-    display: inherit;
 }
 
 #alert-footer {
-    height: 10%;
-    text-align: right;
-    margin-bottom: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 0.5em;
     margin-top: 1em;
     margin-right: 0;
-}
-
-#alert-action {
-    display: none;
 }
 
 #credits {
@@ -268,7 +262,7 @@ button {
 
 @media only screen and (max-aspect-ratio: 9/16) {
     #form {
-        padding: 0;
+        padding: auto;
         margin: auto;
         min-width: 0;
         width: auto;
