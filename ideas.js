@@ -12,7 +12,7 @@ let snarkyComments = [
     "Now describe all of this to your bath toy of choice.",
     "If you're not done by now, a larger refactor might be in order.",
     "That doesn't do what you think it does.",
-    "Thats an okay first attempt, why don't you try harder on the next one?",
+    "That's an okay first attempt, why don't you try harder on the next one?",
     "Maybe try doing it correctly?",
     "As long as it doesn't need to work, this should do fine."
 ]
