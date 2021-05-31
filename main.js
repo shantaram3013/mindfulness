@@ -40,15 +40,16 @@ function init() {
     // set the button's click action
     let text = document.querySelector("#message"); // message to display
 
-    let ideas = document.querySelector("#ideas")
+    let ideas = document.querySelector("#ideas");
     for (let comment of snarkyComments) {
         let opt = document.createElement("option");
         opt.innerHTML = comment;
         opt.value = comment;
-        ideas.onchange = function() {
-            text.value = ideas.value;
-        }
         ideas.appendChild(opt);
+    }
+
+    ideas.onchange = function() {
+        if (ideas.value !== '---') text.value = ideas.value;
     }
 
     let msg = getRandomChoice(snarkyComments);
