@@ -101,7 +101,6 @@ button:focus {
     padding: var(--form-elem-padding);
     display: flex;
     align-items: center;
-    min-width: fit-content;
     margin: var(form-elem-margin);
 }
 
@@ -233,8 +232,13 @@ button {
     justify-content: center;
 }
 
+#ideas-container select {
+    width: 100%;
+}
+
 #ideas {
     display: flex;
+    width: 90%;
 }
 
 #message {
@@ -268,8 +272,7 @@ button {
 
 @media only screen and (max-aspect-ratio: 9/16) {
     #form {
-        padding: auto;
-        margin: auto;
+        margin: unset;
         min-width: 0;
         width: auto;
     }
@@ -285,6 +288,10 @@ button {
     }
 
     #credits {
-        width: 90%;
+        max-width: 80%;
+    }
+
+    * {
+        min-width: auto;
     }
 }
