@@ -9,9 +9,7 @@ class AlertWorkerManager {
         this.msg = ''; // message to send on completion. is blank by default, meant to be set with setMessage() before begin() is called
         this.audio = document.querySelector(audio); // get the audio element so we can play and pause it
 
-        if (this.audio) {
-            this.audio.loop = true; // enable audio loop
-        } else {
+        if (!this.audio) {
             throw new Error("Invalid audio selector specified"); // this is probably the error if audio is null
         }
 
@@ -87,26 +85,4 @@ class AlertWorkerManager {
             }, "Snooze" // snooze button label
         );
     }
-}
-
-function dispatchManager() {
-    let timeout = document.querySelector('#interval');
-    let text = document.querySelector("#message"); // message to display
-    let time = parseInt(timeout.value, 10) * 60; // alarm interval, minutes to seconds conversion
-    let msg = text.value;
-
-    // if there's a manager currently running, kill it for safety
-    if (window.currentAlertManager) {
-        window.currentAlertManager.terminate();
-    }
-    // instantiate and populate the new manager with data
-    let mgr = new AlertWorkerManager("#audio", time, true);
-    mgr.setMessage(msg);
-    mgr.begin(DEFAULT_INTERVAL); // send a heartbeat/check the time every DEFAULT_INTERVAL seconds
-    window.currentAlertManager = mgr;
-    // spawn alert to allow stopping the timer.
-    createAlert("Running...", "The mindfulness timer is running.", "error", function() {
-        mgr.terminate();
-        hideAlert();
-    }, "Stop it");
 }

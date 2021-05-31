@@ -5,7 +5,6 @@ function initialiseAlert() {
 function createAlert(title, body, mode, callback, callbackLabel) {
     // setting mask's display to flex makes every child visible
     document.getElementById('mask').style.display = 'flex';
-
     let close = document.getElementById('alert-close')
     // close button is only hidden in case of an error dialog, so we set this to block by default
 
@@ -29,13 +28,15 @@ function createAlert(title, body, mode, callback, callbackLabel) {
         close.onclick = hideAlert;
     }
 
+    let action = document.getElementById('alert-action');
     if (callback) { // if callback exists, enable the button for it and set the click action
-        let action = document.getElementById('alert-action');
         action.style.display = 'block';
         action.innerHTML = callbackLabel;
         action.onclick = function() {
             callback();
         }
+    } else {
+        action.style.display = 'none';
     }
 
     document.getElementById('alert-header').innerHTML = title; // set dialog title

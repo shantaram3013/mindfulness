@@ -192,8 +192,7 @@ button:focus {
 
 #form-heading {
     font-size: 2em;
-    margin-top: 0.2em;
-    margin: 1em;
+    margin: 0.5em;
     text-align: center;
 }
 
@@ -234,6 +233,13 @@ button {
     justify-content: center;
 }
 
+#ideas {
+    display: flex;
+}
+
+#message {
+    min-width: 60%;
+}
 
 @media only screen and (max-aspect-ratio: 5/3) {
     #form {
