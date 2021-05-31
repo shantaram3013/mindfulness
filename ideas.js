@@ -7,7 +7,7 @@ let snarkyComments = [
     "Are you drawing on the right layer?",
     "Is your code algorithmic and tidy or a spaghetti mess?",
     "It's time to document what you just wrote.",
-    "Time to think about all edge cases for a while.",
+    "Time to think about all possible edge cases for a while.",
     "You know you need to write tests for this, right?",
     "Now describe all of this to your bath toy of choice.",
     "If you're not done by now, a larger refactor might be in order.",
