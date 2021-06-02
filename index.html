@@ -41,7 +41,18 @@
                 </select>
             </div>
         </div>
-
+        <div class='input-wrapper'>
+            <label for='sound-selector'>Select the sound to use</label>
+            <div class='select-wrapper'>
+                <select id='sound-selector'>
+                    <option value='digital'>Digital Alert</option>
+                    <option value='gong'>Gong</option>
+                    <option value='electric'>Electric Bell</option>
+                    <option value='8bit'>8-bit</option>
+                    <option value='asshole'>Obnoxious Alarm Clock</option>
+                </select>
+            </div>
+        </div>
         <div class='input-wrapper'>
             <label for='message'>Message to remind you with:</label>
             <input type='text' id='message'>
@@ -76,7 +87,7 @@
         </div>
     </div>
 
-    <audio src='alarm.mp3' id='audio'></audio>
+    <audio src='digital.mp3' id='audio'></audio>
     <script src='ideas.js'></script>
     <script src='notif.js'></script>
     <script src='alert.js'></script>

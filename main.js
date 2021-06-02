@@ -34,6 +34,14 @@ function getRandomChoice(arr) {
     return arr[Math.round(Math.random() * 100) % arr.length];
 }
 
+const tracks = {
+    'gong': 'gong.mp3',
+    'asshole': 'alarm.mp3',
+    '8bit': '8bit.mp3',
+    'electric': 'electricbell.mp3',
+    'digital': 'digital.mp3'
+}
+
 function init() {
     initialiseAlert(); // initialise the alert dialog's settings
 
@@ -50,6 +58,14 @@ function init() {
 
     ideas.onchange = function() {
         if (ideas.value !== '---') text.value = ideas.value;
+    }
+
+    let soundSelector = document.querySelector('#sound-selector');
+    soundSelector.onchange = function() {
+        let track = tracks[this.value];
+        let audio = document.querySelector('#audio');
+        audio.src = track;
+        audio.preload = 'auto';
     }
 
     let msg = getRandomChoice(snarkyComments);
